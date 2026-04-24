@@ -91,7 +91,7 @@ export const portfolioData = {
         type: "Web/Mobile App",
         results: "Despliegue exitoso en App Store y Play Store con costos operativos optimizados.",
         link: "https://appuebliar.com/",
-        image: "/appuebliar.webp"
+        image: "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/appuebliar.webp"
       },
       {
         id: "p2",
@@ -101,7 +101,7 @@ export const portfolioData = {
         type: "Mobile App",
         results: "Reducción significativa en tiempos de carga y fallos en producción.",
         link: "https://inventarioagil.com/",
-        image: "/iag.webp"
+        image: "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/iag.webp"
       },
       {
         id: "p3",
@@ -121,7 +121,7 @@ export const portfolioData = {
         "type": "Web App / Admin Panel",
         "results": "Reducción en tiempos de desarrollo mediante prototipado con IA y despliegue automatizado en Amplify.",
         "link": "https://main.du71pk4lbw6mu.amplifyapp.com/",
-        image: "/appuebliarAdmin.jpeg"
+        image: "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/appuebliarAdmin.jpeg"
       }
     ],
     blogPosts: [
@@ -273,7 +273,7 @@ export const portfolioData = {
         type: "Mobile App",
         results: "Successfully launched on App Store and Play Store with high scalability.",
         link: "#",
-        image: "/appuebliar.webp"
+        image: "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/appuebliar.webp"
       },
       {
         id: "p2",
@@ -283,7 +283,7 @@ export const portfolioData = {
         type: "Mobile App",
         results: "Significant improvement in UI stability and load times across critical modules.",
         link: "#",
-        image: "/iag.webp"
+        image: "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/iag.webp"
       },
       {
         id: "p3",
@@ -303,7 +303,7 @@ export const portfolioData = {
         "type": "Web App / Admin Panel",
         "results": "Accelerated development lifecycle through AI-assisted prototyping and automated Amplify deployment.",
         "link": "https://main.du71pk4lbw6mu.amplifyapp.com/",
-        "image": "/appuebliarAdmin.jpeg"
+        "image": "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/appuebliarAdmin.jpeg"
       }
     ],
     blogPosts: [

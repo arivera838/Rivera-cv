@@ -18,7 +18,7 @@ export default function Hero() {
           initial={{ scale: 1.1, rotateX: 5 }}
           animate={{ scale: 1, rotateX: 0 }}
           transition={{ duration: 2, ease: "easeOut" }}
-          style={{ backgroundImage: "url('/banner.jpeg')" }}
+          style={{ backgroundImage: "url('https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/banner.jpeg')" }}
           className="absolute inset-x-[-5%] inset-y-[-5%] w-[110%] h-[110%] bg-cover bg-center bg-no-repeat opacity-50 dark:opacity-30 origin-center"
         />
         {/* Futuristic inner shadow and overlays */}
