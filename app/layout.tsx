@@ -3,6 +3,7 @@ import { Space_Grotesk, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/components/LanguageProvider';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import { FirebaseAnalytics } from '@/components/FirebaseAnalytics';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="es" suppressHydrationWarning>
       <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground antialiased bg-grid-pattern min-h-screen`} suppressHydrationWarning>
+        <FirebaseAnalytics />
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <LanguageProvider>
             {children}

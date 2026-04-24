@@ -5,11 +5,16 @@ import { useLanguage } from './LanguageProvider';
 import { portfolioData } from '@/lib/data';
 import { useTheme } from 'next-themes';
 import { Moon, Sun } from 'lucide-react';
+import { logCustomEvent } from '@/lib/firebase';
 
 export default function Navbar() {
   const { lang, toggleLang } = useLanguage();
   const ui = portfolioData[lang].ui;
   const { theme, setTheme, resolvedTheme } = useTheme();
+  
+  const handleNavigation = (section: string) => {
+    logCustomEvent('navigate_section', { section });
+  };
   
   return (
     <nav className="relative z-50 p-6 flex flex-col md:flex-row justify-between items-start md:items-center bg-transparent border-b border-border pb-4 mx-6 mt-6">
@@ -33,9 +38,9 @@ export default function Navbar() {
         <button onClick={toggleLang} className="hover:text-primary transition-colors uppercase border border-border px-2 py-1 rounded-sm text-[10px]">
           {lang === 'es' ? 'EN' : 'ES'}
         </button>
-        <a href="#projects" className="hover:text-primary transition-colors uppercase">{ui.navProjects}</a>
-        <a href="#experience" className="hover:text-primary transition-colors uppercase">{ui.navArchives}</a>
-        <a href="#blog" className="hover:text-primary transition-colors uppercase">{ui.navInsights}</a>
+        <a href="#projects" onClick={() => handleNavigation('projects')} className="hover:text-primary transition-colors uppercase">{ui.navProjects}</a>
+        <a href="#experience" onClick={() => handleNavigation('experience')} className="hover:text-primary transition-colors uppercase">{ui.navArchives}</a>
+        <a href="#blog" onClick={() => handleNavigation('blog')} className="hover:text-primary transition-colors uppercase">{ui.navInsights}</a>
       </div>
     </nav>
   );

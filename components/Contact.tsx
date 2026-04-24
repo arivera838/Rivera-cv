@@ -5,6 +5,7 @@ import { motion } from 'motion/react';
 import { Send, Github, Linkedin, MessageCircle, Mail } from 'lucide-react';
 import { portfolioData } from '@/lib/data';
 import { useLanguage } from './LanguageProvider';
+import { logCustomEvent } from '@/lib/firebase';
 
 export default function Contact() {
   const { lang } = useLanguage();
@@ -17,12 +18,20 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
+    logCustomEvent('contact_form_submit', {
+      name_length: formData.name.length,
+      message_length: formData.message.length
+    });
     // Simulate sending
     setTimeout(() => {
       setStatus('sent');
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setStatus('idle'), 3000);
     }, 1500);
+  };
+
+  const handleLinkClick = (type: string) => {
+    logCustomEvent('contact_link_click', { type });
   };
 
   return (
@@ -39,7 +48,7 @@ export default function Contact() {
           <p className="text-3xl font-bold text-foreground mb-6 tracking-tighter">{ui.contactSubtitle}</p>
 
           <div className="space-y-6">
-            <a href={`mailto:${data.personalInfo.email}`} className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group tracking-widest text-[10px] font-mono">
+            <a href={`mailto:${data.personalInfo.email}`} onClick={() => handleLinkClick('email')} className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group tracking-widest text-[10px] font-mono">
               <div className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center group-hover:border-primary transition-colors">
                 <Mail size={16} />
               </div>
@@ -47,13 +56,13 @@ export default function Contact() {
             </a>
             
             <div className="flex items-center gap-3 pt-4">
-              <a href={data.personalInfo.github} className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-white transition-all">
+              <a href={data.personalInfo.github} onClick={() => handleLinkClick('github')} className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-white transition-all">
                 <Github size={16} />
               </a>
-              <a href={data.personalInfo.linkedin} className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center text-muted-foreground hover:text-[#0077B5] hover:border-[#0077B5] transition-all">
+              <a href={data.personalInfo.linkedin} onClick={() => handleLinkClick('linkedin')} className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center text-muted-foreground hover:text-[#0077B5] hover:border-[#0077B5] transition-all">
                 <Linkedin size={16} />
               </a>
-              <a href={data.personalInfo.whatsapp} target="_blank" rel="noopener noreferrer" title="WhatsApp" className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center text-muted-foreground hover:text-[#25D366] hover:border-[#25D366] transition-all">
+              <a href={data.personalInfo.whatsapp} onClick={() => handleLinkClick('whatsapp')} target="_blank" rel="noopener noreferrer" title="WhatsApp" className="w-10 h-10 rounded-sm bg-surface-alt border border-border flex items-center justify-center text-muted-foreground hover:text-[#25D366] hover:border-[#25D366] transition-all">
                 <MessageCircle size={16} />
               </a>
             </div>
