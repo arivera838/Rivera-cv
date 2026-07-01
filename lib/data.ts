@@ -122,6 +122,16 @@ export const portfolioData = {
         "results": "Reducción en tiempos de desarrollo mediante prototipado con IA y despliegue automatizado en Amplify.",
         "link": "https://main.du71pk4lbw6mu.amplifyapp.com/",
         image: "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/appuebliarAdmin.jpeg"
+      },
+      {
+        "id": "p5",
+        "title": "KYJ Tienda Multimarca",
+        "description": "E-commerce creado con Next.js con conexión a Firebase y subido a Vercel.",
+        "technologies": ["Next.js", "Firebase", "Vercel"],
+        "type": "Web App / E-commerce",
+        "results": "Tienda multimarca desplegada exitosamente con alta disponibilidad.",
+        "link": "https://kjtiendamultimarca.com/",
+        "image": "/kjmultimarcas.jpeg"
       }
     ],
     blogPosts: [
@@ -304,6 +314,16 @@ export const portfolioData = {
         "results": "Accelerated development lifecycle through AI-assisted prototyping and automated Amplify deployment.",
         "link": "https://main.du71pk4lbw6mu.amplifyapp.com/",
         "image": "https://almima-appuebliar-assets.s3.us-east-1.amazonaws.com/rivera/appuebliarAdmin.jpeg"
+      },
+      {
+        "id": "p5",
+        "title": "KYJ Tienda Multimarca",
+        "description": "E-commerce built with Next.js, connected to Firebase and deployed on Vercel.",
+        "technologies": ["Next.js", "Firebase", "Vercel"],
+        "type": "Web App / E-commerce",
+        "results": "Successfully deployed multibrand online store with high availability.",
+        "link": "https://kjtiendamultimarca.com/",
+        "image": "/kjmultimarcas.jpeg"
       }
     ],
     blogPosts: [
