@@ -1,35 +1,23 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk, JetBrains_Mono } from 'next/font/google';
+import { Kanit } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/components/LanguageProvider';
-import { ThemeProvider } from '@/components/ThemeProvider';
-import { FirebaseAnalytics } from '@/components/FirebaseAnalytics';
-
-const spaceGrotesk = Space_Grotesk({
+const kanit = Kanit({
   subsets: ['latin'],
-  variable: '--font-sans',
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-kanit',
 });
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-});
-
 export const metadata: Metadata = {
-  title: 'Andres | Sr. Software Developer',
-  description: 'Futuristic portfolio and interactive dashboard of a Senior Software Developer.',
+  title: 'Andrés Rivera -- 3D Creator',
+  description: 'Senior Software Engineer | React Native | Tech Lead',
 };
-
-export default function RootLayout({children}: {children: React.ReactNode}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans bg-background text-foreground antialiased bg-grid-pattern min-h-screen`} suppressHydrationWarning>
-        <FirebaseAnalytics />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <LanguageProvider>
-            {children}
-          </LanguageProvider>
-        </ThemeProvider>
+    <html lang="en" className="dark">
+      <body className={`${kanit.variable} font-sans bg-[#0C0C0C] text-[#D7E2EA] antialiased`}>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
