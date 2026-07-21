@@ -14,7 +14,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 px-4 overflow-hidden">
       {/* 3D Banner Background */}
       <div className="absolute inset-0 z-0 perspective-[1000px]">
-        <motion.div 
+        <motion.div
           initial={{ scale: 1.1, rotateX: 5 }}
           animate={{ scale: 1, rotateX: 0 }}
           transition={{ duration: 2, ease: "easeOut" }}
@@ -25,10 +25,10 @@ export default function Hero() {
         <div className="absolute inset-0 bg-background/60 dark:bg-background/40 z-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-10" />
         <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background z-10" />
-        
+
         {/* Inner glow effect */}
         <div className="absolute inset-0 shadow-[inset_0_0_100px_rgba(255,255,255,0.9)] dark:shadow-[inset_0_0_200px_rgba(0,0,0,1)] z-10 pointer-events-none" />
-        
+
         {/* Holographic frame */}
         <div className="absolute inset-4 md:inset-8 border border-primary/30 dark:border-primary/20 rounded-md shadow-[inset_0_0_50px_rgba(0,112,243,0.05)] dark:shadow-[inset_0_0_50px_rgba(0,240,255,0.05)] z-10 pointer-events-none" />
         <div className="absolute top-4 left-4 md:top-8 md:left-8 w-8 h-8 border-t-2 border-l-2 border-primary/50 z-10" />
@@ -66,7 +66,7 @@ export default function Hero() {
           <a href="#projects" className="bg-primary text-white dark:text-black font-bold text-[10px] px-8 py-3 rounded-sm uppercase tracking-widest hover:bg-black dark:hover:bg-white transition-colors">
             {ui.heroInitBtn}
           </a>
-          
+
           <button className="bg-surface-alt border border-border px-8 py-3 text-[10px] rounded-sm font-bold tracking-widest hover:border-primary transition-all flex items-center gap-2 uppercase text-foreground">
             <Download size={14} />
             {ui.heroDownloadPdf}

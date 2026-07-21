@@ -4,7 +4,7 @@ import React from 'react';
 import FadeIn from './FadeIn';
 import Magnet from './Magnet';
 import ContactButton from './ContactButton';
-import { portfolioData } from '@/lib/data';
+import { portfolioData } from '@/lib/data.js';
 import { useLanguage } from './LanguageProvider';
 
 export default function HeroSection() {
@@ -15,9 +15,9 @@ export default function HeroSection() {
   const firstName = info.name.split(' ')[0].toLowerCase();
 
   return (
-    <section className="relative h-screen flex flex-col justify-between overflow-x-clip px-6 sm:px-8 md:px-10">
+    <section className="relative min-h-screen sm:h-screen flex flex-col justify-between overflow-x-clip px-6 sm:px-8 md:px-10">
       <FadeIn delay={0} y={-20} className="w-full">
-        <nav className="flex justify-between items-center pt-6 md:pt-8 w-full text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem]">
+        <nav className="flex flex-wrap justify-center gap-x-6 gap-y-2 sm:justify-between items-center pt-6 md:pt-8 w-full text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem]">
           {[
             { id: 'about', label: ui.navAbout },
             { id: 'experience', label: ui.navExperience },
@@ -38,7 +38,7 @@ export default function HeroSection() {
           </h1>
         </FadeIn>
 
-        <FadeIn delay={0.6} y={30} className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px]">
+        <FadeIn delay={0.6} y={30} className="relative sm:absolute left-1/2 -translate-x-1/2 mt-6 sm:mt-0 sm:bottom-0 z-10 w-[240px] sm:w-[360px] md:w-[440px] lg:w-[520px]">
           <Magnet padding={150} strength={3} activeTransition="transform 0.3s ease-out" inactiveTransition="transform 0.6s ease-in-out">
             <img
               src="/avatar.png"
