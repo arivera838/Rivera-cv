@@ -173,6 +173,16 @@ export const portfolioData = {
         results: "Tienda multimarca desplegada exitosamente con alta disponibilidad.",
         link: "https://kjtiendamultimarca.com/",
         image: "/kjmultimarcas.jpeg"
+      },
+      {
+        id: "p6",
+        title: "Servidor de Automatización n8n",
+        description: "Servidor de automatización autoalojado corriendo n8n en una Raspberry Pi 3 B+ y expuesto de forma segura usando Cloudflare Tunnels. Este mismo servidor aloja y sirve actualmente la página web del portafolio que estás viendo en este momento.",
+        technologies: ["n8n", "Raspberry Pi", "Cloudflare Tunnels", "Docker", "Node.js"],
+        type: "Server / DevOps",
+        results: "2 agentes de IA básicos activos en producción gestionando tareas y automatizaciones.",
+        link: "https://n8n.andresrivera.dev/",
+        image: "/n8n-diagram.png"
       }
     ],
     blogPosts: [
@@ -416,6 +426,16 @@ export const portfolioData = {
         results: "Successfully deployed multibrand online store with high availability.",
         link: "https://kjtiendamultimarca.com/",
         image: "/kjmultimarcas.jpeg"
+      },
+      {
+        id: "p6",
+        title: "n8n Automation Server",
+        description: "Self-hosted workflow automation server running n8n on a Raspberry Pi 3 B+ and securely exposed via Cloudflare Tunnels. This very server currently hosts and serves the portfolio page you are viewing right now.",
+        technologies: ["n8n", "Raspberry Pi", "Cloudflare Tunnels", "Docker", "Node.js"],
+        type: "Server / DevOps",
+        results: "2 basic AI agents active in production managing tasks and automated workflows.",
+        link: "https://n8n.andresrivera.dev/",
+        image: "/n8n-diagram.png"
       }
     ],
     blogPosts: [
